@@ -75,6 +75,36 @@ body {
 }
 
 /* Pseudo-classes - Hover effect on product button */
+
+.category-title {
+  text-align: center;
+  position: relative;
+  font-size: 28px;
+  color: #333;
+  margin: 40px 0;
+  padding: 10px 0;
+}
+
+.category-title::before,
+.category-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #4CAF50;
+}
+
+.category-title::before {
+  top: 0; /* linha superior */
+}
+
+.category-title::after {
+  bottom: 0; /* linha inferior */
+}
+
+
 .product-card:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
